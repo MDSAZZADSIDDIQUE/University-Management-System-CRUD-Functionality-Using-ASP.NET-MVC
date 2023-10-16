@@ -1,0 +1,25 @@
+﻿@{
+	ViewBag.Title = "Index";
+}
+
+<table class="table table-hover">
+	<thead>
+	<tr>
+		<th scope="col">Id</th>
+		<th scope="col">Name</th>
+	</tr>
+	</thead>
+	<tbody>
+	@foreach (var d in Model)
+	{
+		<tr class="table-light">
+			<td class="align-middle">@d.Id</td>
+			<td class="align-middle">@d.Name</td>
+			<td>
+				<a href="/home/edit/@d.Id" class="btn btn-info">Edit</a>
+				<a href="/home/delete/@d.Id" class="btn btn-danger">Delete</a>
+			</td>
+		</tr>
+	}
+	</tbody>
+</table>

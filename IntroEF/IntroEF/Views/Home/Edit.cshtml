@@ -1,0 +1,16 @@
+﻿
+@{
+	ViewBag.Title = "Edit";
+}
+
+<form method="post" class="mt-5">
+	<fieldset>
+		<legend>Edit Department</legend>
+		<input type="hidden" name="Id" value="@Model.Id" />
+		<div class="form-group">
+			<label for="departmentName" class="form-label">Add Department</label>
+			<input type="text" class="form-control" name="Name" id="departmentName" placeholder="Enter department" value="@Model.Name" >
+		</div>
+		<input type="submit" class="btn btn-success mt-3" value="Update" />
+	</fieldset>
+</form>

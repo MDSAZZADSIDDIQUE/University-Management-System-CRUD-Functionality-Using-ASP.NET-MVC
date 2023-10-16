@@ -1,0 +1,21 @@
+﻿
+@{
+	ViewBag.Title = "EditStudent";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" class="mt-5">
+	<fieldset>
+		<h1><legend>Add Student</legend></h1>
+		<div class="form-group mt-5">
+			<label for="studentName" class="form-label">Name:</label>
+			<input type="text" class="form-control" name="Name" id="studentName" placeholder="Enter Studnet Name" value="@Model.Name">
+		</div>
+		<div class="form-group mt-3">
+			<label for="studentCGPA" class="form-label">CGPA:</label>
+			<input type="text" class="form-control" name="Cgpa" id="studentCGPA" placeholder="Enter Studnet Cgpa" value="@Model.Cgpa">
+		</div>
+		<input type="submit" class="btn btn-success mt-3" value="Update" />
+	</fieldset>
+</form>
+

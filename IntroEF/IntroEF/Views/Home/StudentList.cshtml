@@ -1,0 +1,29 @@
+﻿
+@{
+	ViewBag.Title = "StudentList";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var s in Model)
+		{
+			<tr class="table-light">
+				<td class="align-middle">@s.Id</td>
+				<td class="align-middle">@s.Name</td>
+				<td class="align-middle">@s.Cgpa</td>
+				<td>
+					<a href="/Home/EditStudent/@s.Id" class="btn btn-info">Edit</a>
+					<a href="/Home/DeleteStudent/@s.Id" class="btn btn-danger">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+

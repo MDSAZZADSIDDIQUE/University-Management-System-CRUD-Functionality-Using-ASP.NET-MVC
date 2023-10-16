@@ -1,0 +1,14 @@
+﻿
+@{
+	ViewBag.Title = "DeleteStudent";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post">
+	<input type="hidden" name="Id" value="@Model.Id" />
+	<h1 class="mt-5">Delete @Model.Name?</h1>
+	<input type="submit" name="action" value="Delete" class="btn btn-danger mt-3" />
+	<input type="submit" name="action" value="Cancel" class="btn btn-warning mt-3" />
+</form>
+
+
